@@ -28,7 +28,7 @@ class Api::V1::AlbumsController < ApplicationController
 
     def destroy
         album = Album.find(params[:id])
-        
+
         if album.destroy
             render json: {"Success": "Album with id " + params[:id] + " was deleted!"}
         end
